@@ -36,3 +36,49 @@ This repository provides an AI-driven framework to analyze **Nifty 50** or other
 ```bash
 git clone https://github.com/your-username/ai-stock-analysis.git
 cd ai-stock-analysis
+```
+
+2. Set Up the Environment
+```bash
+pip install -r requirements.txt
+```
+3. Create a .env File: Add your environment variables to configure the system:
+```bash
+NSE_PDF_URL=https://www.nseindia.com/path-to-nifty50-report.pdf
+OPENAI_API_KEY=your_openai_api_key
+```
+4. Setup Logging: Logging is pre-configured. Logs will be stored in the logs/ directory
+ Run the System
+```bash
+python main.py
+```
+
+ Periodic Updates
+Set up a cron job or use APScheduler to automate the periodic updates:
+```bash
+python scheduler.py
+```
+.
+📂 Repository Structure
+├── README.md               # Project overview and instructions
+├── main.py                 # Entry point for the application
+├── utils/
+│   ├── pdf_extractor.py    # Parses stock details from the NSE PDF
+│   ├── stock_analyzer.py   # Performs technical and fundamental analysis
+│   ├── ai_agents.py        # Multi-agent system for insights generation
+│   └── report_generator.py # Compiles insights into a report
+├── data/
+│   └── latest_stocks.csv   # Temporary data storage
+├── logs/                   # Application logs
+├── .env                    # Environment variables
+├── requirements.txt        # Dependencies
+├── .gitignore              # Ignored files
+└── scheduler.py            # Automates periodic updates
+
+----
+🌐 API Integration
+You can extend the system to fetch additional data or integrate with APIs like:
+
+Twitter for sentiment analysis
+News APIs for geopolitical updates
+Custom Financial Data Providers
