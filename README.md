@@ -59,6 +59,7 @@ Set up a cron job or use APScheduler to automate the periodic updates:
 python scheduler.py
 ```
 .
+```bash
 📂 Repository Structure
 ├── README.md               # Project overview and instructions
 ├── main.py                 # Entry point for the application
@@ -74,7 +75,7 @@ python scheduler.py
 ├── requirements.txt        # Dependencies
 ├── .gitignore              # Ignored files
 └── scheduler.py            # Automates periodic updates
-
+```
 ----
 🌐 API Integration
 You can extend the system to fetch additional data or integrate with APIs like:
